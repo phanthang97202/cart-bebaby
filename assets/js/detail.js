@@ -269,7 +269,7 @@ addToCart.addEventListener("click", (e) => {
       console.log("CHƯA TỒN TẠI", carts);
       carts = [...carts, itemCart];
       localStorage.setItem("carts", JSON.stringify(carts));
-      window.location.reload();
+      // window.location.reload();
       // viewItemInCarts();
       // carts = localStorage.setItem("carts", JSON.stringify(carts));
       console.log(carts);
@@ -293,10 +293,12 @@ addToCart.addEventListener("click", (e) => {
       console.log("===updatePro", updatePro);
 
       localStorage.setItem("carts", JSON.stringify(updatePro));
-      window.location.reload();
+      // window.location.reload();
       // carts = localStorage.setItem("carts", JSON.stringify(updatePro));
       // viewItemInCarts();
     }
+    viewQuantityOnCarts();
+    viewItemInCarts();
   } else {
     alert("Nhập đầy đủ thông tin!");
   }
@@ -423,7 +425,7 @@ const viewItemInCarts = () => {
     });
   });
 
-  // xóa sản phẩm theo idcart
+  // xóa sản phẩm theo idcart trong view
   Array.from(removeItemCartList).forEach((node) => {
     node.addEventListener("click", (e) => {
       console.log(node);
