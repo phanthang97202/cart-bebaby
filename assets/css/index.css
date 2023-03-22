@@ -1,0 +1,1381 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: inherit;
+  /* kế thừa */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+/* Làm modal__cover  */
+.modal__cover {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  transition: all 0.3s ease-in;
+  z-index: 100;
+}
+/* .modal__cover .active{
+    display: block;
+} */
+.menu__cover--toggle {
+  z-index: 10;
+  width: 250px;
+  height: 100%;
+  background-color: #232c38;
+  float: right;
+}
+
+.menu__cover--close {
+  font-size: 3rem;
+  color: #fff;
+  /* float: right; */
+  margin: 1.4rem auto 1.4rem 20.5rem;
+}
+
+.menu__cover--slect {
+  font-family: "Jost", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem 2.4rem 3rem;
+}
+
+.menu__cover--slect li {
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.menu__cover--toggle ul li {
+  /* list-style-type: none; */
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.menu__cover--slect li ion-icon {
+  font-family: "Jost";
+  font-size: 2rem;
+  --ionicon-stroke-width: 40px;
+}
+.menu__cover--heart {
+  position: relative;
+}
+.menu__cover--heart span {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  font-size: 1.1rem;
+}
+
+.menu__cover--bag {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 3px;
+}
+.menu__cover--bag span {
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  font-size: 1.1rem;
+}
+.menu__cover--bag p {
+  padding-left: 1rem;
+}
+
+/* phần menu__cover--title  */
+
+.menu__cover--title {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  /* height: 50px; */
+  cursor: pointer;
+}
+.menu__cover--title li {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+.menu__cover--title li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.menu__cover--title li:hover a {
+  color: #edb989;
+  cursor: pointer;
+}
+.menu__cover--title li:first-child a {
+  color: #edb989;
+}
+.menu__cover--title li a {
+  /* text-decoration: none; */
+  color: #fff;
+  /* position: relative;
+    top: 0;
+    right: 50%;
+    transform: translateX(-50%); */
+}
+
+/* phần menu__cover--help  */
+.menu__cover--help {
+  font-family: "Jost";
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+.menu__cover--help li {
+  font-size: 2rem;
+  padding-right: 0.8rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu__cover--help li:last-child {
+  border-right: none;
+}
+.menu__cover--help li a {
+  color: #fff;
+}
+
+/*  menu__footer  */
+.footer__fix {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: violet;
+}
+
+/* phần thanh introduce  */
+.introduce {
+  font-size: 1.7rem;
+  font-family: "jost";
+  background-color: #101015;
+  /* line-height: 21px; */
+  color: #bbbbbb;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 18rem;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  /* display: none; */
+}
+
+.introduce__text span {
+  color: #edb989;
+}
+.introduce__help {
+  /* width: 20%; */
+  display: flex;
+  justify-content: space-around;
+}
+.introduce__help li:nth-child(2) {
+  padding: 0 2rem;
+}
+
+.introduce__help li a {
+  color: #bbbbbb;
+}
+#addToCart.unactive {
+  opacity: 0.5;
+}
+/* phần header__logo  */
+.header {
+  /* z-index: 10; */
+  padding: 0 12%;
+  z-index: 1000;
+}
+@keyframes animationHeader {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.container {
+  text-align: center;
+  background-color: #fff;
+  /* animation: animationHeader 0.3s linear; */
+}
+/* bắt sự kiện cuộn trang  */
+.activeScroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transform: translateY(-50%); */
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  /* transition: all 3s ease-in; */
+  width: 100%;
+  padding: 0 16rem;
+  z-index: 1000;
+}
+
+.header__logo {
+  padding: 3.2rem;
+  border-bottom: 1px solid #e8ecf2;
+}
+.header__logo a img {
+  width: 210px;
+  height: 50px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  transition: all 0.3s linear;
+}
+
+.header__menu--lists {
+  font-family: "jost";
+  color: #2a2b39;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu--lists li {
+  padding: 2rem 2rem;
+  position: relative;
+  border-bottom: #fff solid 4px;
+}
+.header__menu--lists li:nth-child(1) {
+  color: #ebc989;
+  border-bottom: #ebc989 solid 4px;
+}
+.header__menu--lists li:hover {
+  color: #ebc989;
+  cursor: pointer;
+  border-bottom: #ebc989 solid 4px;
+}
+
+/* phần header__cover--selectTwo{ */
+
+.header__menu--select {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  --ionicon-stroke-width: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 3rem;
+}
+
+.header__menu--select li {
+  padding: 0 1rem;
+}
+
+.header__menu--heart {
+  position: relative;
+}
+.header__menu--heart ion-icon {
+  font-size: 2.2rem;
+}
+.header__menu--heart span {
+  background-color: #ebc989;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+
+  position: absolute;
+  top: -11px;
+  right: -5px;
+}
+.header__menu--bag {
+  display: flex;
+  position: relative;
+}
+.header__menu--bag p {
+  padding-left: 1.2rem;
+  font-weight: 500;
+}
+.header__menu--bag span {
+  background-color: #ebc989;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+
+  position: absolute;
+  top: -12px;
+  right: 34px;
+}
+
+.header__menu--bag p {
+  font-size: 1.6rem;
+}
+
+/* // css phần menu__active  */
+#menu__active {
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* css phần feature  */
+.feature {
+  width: 100%;
+  padding: 5rem 10%;
+}
+.container__feature {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container__feature--left {
+  font-family: "Bodoni Moda", serif;
+  width: calc(100% * (2 / 3));
+  background: url("../img/feature.jpg") top center / cover no-repeat;
+  /* height: 100vh; */
+  height: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.feature--title {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 4rem;
+  width: 400px;
+  line-height: 60px;
+}
+
+.button-click {
+  font-size: 2rem;
+  background-color: #101015;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 6rem 0 4rem 0;
+  border: none;
+  transition: transform 0.3s;
+}
+.button-click:hover {
+  transform: scale(1.1);
+  background-color: #ae8080;
+}
+.button-click ion-icon {
+  padding: 12px 10px;
+}
+.feature--title span:nth-child(1) {
+  font-weight: bold;
+  font-size: 4rem;
+  font-style: normal;
+}
+
+.feature--title span:nth-child(2) {
+  font-weight: bold;
+  font-size: 8rem;
+  color: #ebc989;
+  font-style: normal;
+}
+
+.container__feature--left img {
+  width: 100%;
+  height: 100%;
+}
+
+.container__feature--right {
+  font-family: "Bodoni Moda", serif;
+  width: calc(100% / 3.2);
+  margin-left: 2rem;
+}
+.container__feature--right div {
+  margin-bottom: 2rem;
+}
+
+.container__feature--rightTop {
+  background-color: #eef2f3;
+}
+
+.children__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.children__center--title {
+  width: 200px;
+  line-height: 1.4;
+  text-align: center;
+}
+.children__center div h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #171b20;
+}
+.children__center--number {
+  display: flex;
+  /* justify-content: center; */
+}
+.children__center--number div {
+  margin: 0 2rem;
+  border-bottom: 3px solid #d6d9da;
+  border-top: 3px solid transparent;
+  padding: 1.8rem 1rem;
+}
+
+.children__center--number div:hover {
+  /* background-color: #232c38; */
+  animation: flight 0.4s ease-in;
+}
+@keyframes flight {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.children__center--number div a {
+  font-family: "jost";
+  font-weight: bold;
+  color: #171b20;
+  font-size: 1.6rem;
+}
+
+.container__feature--rightBottom {
+  background: url("../img/background.png") top center / cover no-repeat;
+}
+
+.children__center img {
+  width: 176px;
+  height: 123px;
+}
+.children__center p {
+  font-family: "Bodoni Moda", serif;
+  font-size: 3rem;
+  line-height: 1.4;
+}
+.children__center--sale {
+  font-weight: bold;
+}
+
+.viewCollection {
+  font-family: "Jost";
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-bottom: 3px solid #d6d9da;
+  padding: 1.6rem;
+}
+.children__center div a {
+  color: #171b20;
+}
+
+/* // phần css phần category  */
+.category {
+  width: 100%;
+  /* z-index: 9; */
+}
+.container__category {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 14%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__category--main {
+  font-family: "Bodoni Moda";
+  width: calc(20%);
+  height: 4rem;
+  /* background-color: #ced0e1; */
+  margin: 2rem 1rem;
+  font-size: 2.4rem;
+  padding: 2rem 2rem;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: -1;
+}
+.container__category--main a p,
+.container__category--main a ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container__category--main a p {
+}
+.container__category--main a ion-icon {
+  opacity: 0;
+}
+
+.container__category--main:hover {
+  opacity: 1;
+}
+
+/* .container__category--main:hover a p{ 
+    transform: translate(10px, 10px);
+}
+.container__category--main:hover a ion-icon{ 
+    transform: translate(-4px, 4px);
+    opacity: 1;
+} */
+
+.container__category--main a {
+  color: #171b20;
+}
+
+/* phần advertisement  */
+.advertisement {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.advertisement__container {
+  /* display: flex; */
+  flex-wrap: wrap;
+  margin: 0 14%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advertisement__container img {
+  margin-bottom: 4rem;
+}
+
+.advertisement__container h2 {
+  font-family: "Bodoni Moda", serif;
+  padding: 0 32%;
+  font-size: 2.7rem;
+  line-height: 1.2;
+  font-weight: 400;
+  /* text-align: justify; */
+  /* text-justify: inter-word; */
+  /* letter-spacing: 1px; */
+}
+
+/* .advertisement__container h2 span{ 
+    position: relative;
+    z-index: 1;
+}
+.advertisement__container h2 span::after{ 
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    background-color: rgb(235, 201, 137, 1);
+    height: 10px;
+    width: 156px;
+    z-index: -1;
+    border-top-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    transform: rotate(-2deg);
+} */
+
+/* css phần products  */
+/* .products{
+    z-index: -2;
+} */
+.products__title {
+  font-family: "Bodoni Moda", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* css phần products  */
+
+.products {
+  width: 100%;
+  padding: 5rem 10%;
+}
+
+.products__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__item {
+  text-align: center;
+  margin: 3rem 0;
+  font-family: "jost";
+  font-size: 2rem;
+  max-height: 440px;
+  /* z-index: -2; */
+}
+.products__item a {
+  padding: 0;
+  margin: 0;
+}
+
+.products__item--view {
+  width: 274px;
+  height: 328px;
+  /* border: 1px solid red; */
+  margin: 0 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.products__item--view:hover img {
+  transform: scale(1.1);
+
+  transition: all 0.3s ease-in;
+}
+.products__item--view:hover .products__item--options {
+  display: flex;
+}
+.products__item--view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products__item--view p {
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.4rem;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #ebc989;
+  z-index: 1;
+}
+
+.products__item--options {
+  font-size: 2.4rem;
+
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 60px;
+
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  display: none;
+  /* transition: all 3s ease; */
+}
+.products__item--options ion-icon:nth-child(1) {
+  transform: rotate(-40deg);
+}
+
+.products__item--options ion-icon {
+  color: #000;
+}
+.products__item--options ion-icon:hover {
+  color: #ebc989;
+}
+/* .products__item--options ion-icon:first-child{
+    padding-left: 0;
+}
+.products__item--options ion-icon:first-child{
+    padding-right: 0;
+} */
+.products__item--name {
+  width: 274px;
+  /* height: 328px; */
+  overflow: hidden;
+  padding-top: 3rem;
+}
+.products__item--name p {
+  /* width: 100%; */
+  line-height: 1.2;
+  color: #373f4b;
+  overflow: hidden;
+  /* height: 6rem; */
+
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.products__item--click {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.products__item--click li {
+  width: 2rem;
+  height: 2rem;
+  /* background-color: #232c38; */
+  border-radius: 50%;
+  border: 3px solid #bbbbbb;
+  margin: 0 2px;
+}
+
+/* các lựa chọn  */
+.products__item--click .blue {
+  background-color: #3a6380;
+}
+.products__item--click .brown {
+  background-color: #773d49;
+}
+.products__item--click .red {
+  background-color: #bc2332;
+}
+.products__item--click .yellow {
+  background-color: #edc582;
+}
+.products__item--click .violet {
+  background-color: violet;
+}
+
+.products__item--price del {
+  color: #ebc989;
+  font-size: 1.4rem;
+  text-decoration: line-through;
+}
+.products__item--price span {
+  color: #ebc989;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.button__options {
+  margin-top: 4rem;
+  align-items: center;
+  text-align: center;
+}
+.button__options button {
+  margin: 1rem;
+}
+.btn {
+  outline: none;
+  border: none;
+  padding: 1.8rem 4rem;
+  font-size: 1.4rem;
+  font-family: "jost";
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-black {
+  color: #fff;
+  background-color: #171b20;
+}
+.btn-black:hover {
+  background-color: #232c38;
+}
+
+.btn-white {
+  color: #626262;
+  background-color: #ececec;
+}
+.btn-white:hover {
+  background-color: #e3dbdb;
+}
+
+.btn-yellow {
+  color: #ffffff;
+  background-color: #ebc989;
+}
+.btn-yellow:hover {
+  background-color: #edb989;
+}
+
+/* css phần limited  */
+.limited {
+  width: 100%;
+  /* height: 722px; */
+  /* height: 800px; */
+  padding: 5rem 10%;
+  z-index: -6;
+}
+
+.container__limited {
+  /* height: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  /* margin-bottom: 100px; */
+}
+
+.limited__offer {
+  font-family: "Bodoni Moda";
+
+  /* height: 800px; */
+  height: 722px;
+
+  width: 50%;
+  /* height: 100%; */
+  background: url("../img/babyshop-home-pic1.webp") top center / cover no-repeat;
+  z-index: -3;
+}
+
+.limited__offer--center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 34% 0;
+
+  line-height: 1.2;
+}
+.limited__offer--title {
+  font-family: "jost";
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.limited__offer--percen {
+  font-size: 12rem;
+  font-weight: bold;
+  color: #ebc989;
+}
+.limited__offer--center p:nth-child(3) {
+  font-size: 6rem;
+  font-weight: 600;
+  margin-top: -6rem;
+}
+
+.limited__timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.6rem;
+  margin-top: 3rem;
+}
+.limited__timer div {
+  margin: 0 5rem;
+  border-bottom: 1px #e8e4e4 solid;
+  padding: 1.6rem 0;
+}
+.limited__timer div p:nth-child(1) {
+  font-family: "jost";
+  font-size: 3rem;
+  color: #ebc989;
+  /* font-weight: bold; */
+}
+
+/* // phần limited__slide  */
+.limited__slide {
+  font-family: "JOST";
+  width: 50%;
+  /* height: 100%; */
+  /* height: 800px; */
+  height: 722px;
+
+  background-color: #eaf0f7;
+  position: relative;
+
+  box-sizing: border-box;
+
+  z-index: -6;
+}
+
+.limited__slide--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.limited__slide--desc {
+  font-size: 1.4rem;
+  color: #171b20;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+.limited__slide--textBig {
+  font-family: "bonodi moda";
+  font-size: 6rem;
+  font-weight: 600;
+  color: #2a3135;
+  margin-bottom: 8rem;
+}
+.limited__slide--textBig span {
+  color: #9aafc1;
+}
+.limited__slide--container {
+  display: flex;
+
+  position: relative;
+}
+.limited__slide--container button {
+  height: 4rem;
+  align-items: center;
+  text-align: center;
+  /* margin: 4rem 0; */
+  background-color: transparent;
+  border: none;
+  font-size: 6rem;
+  color: #bbbbbb;
+}
+.click__left:hover,
+.click__right:hover {
+  color: #373f4b;
+  cursor: pointer;
+}
+.click__left {
+  position: absolute;
+  left: -56px;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.click__right {
+  position: absolute;
+  right: -112px;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.limited__slide--main {
+  width: 264px;
+  height: fit-content;
+  /* width: 50%;
+    height: 50%; */
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+}
+
+/* .limited__slide--content{
+    
+} */
+
+.limited__slide--product {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 4rem;
+}
+.limited__slide--content p {
+  color: #6a717c;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+
+.limited__slide--brand {
+  width: 158px;
+  height: 39px;
+}
+
+/* css phần question  */
+.question {
+  width: 100%;
+  padding: 5rem 10%;
+}
+.question__container {
+  height: 100%;
+  display: block;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.question__container p:nth-child(1) {
+  font-family: "Bodoni Moda", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: bold;
+
+  /* width: 586px; */
+  margin: 0 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+.question__container p:nth-child(2) {
+  font-family: "jost", serif;
+  font-size: 2rem;
+  line-height: 1.2;
+
+  margin: 0 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* css phần choosing  */
+.choosing {
+  /* width: 100%; */
+  padding: 5rem 10%;
+}
+.choosing__container {
+  text-align: center;
+}
+.choosing__container--box {
+  font-family: "jost";
+
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  height: fit-content;
+}
+
+.choosing__container--lists {
+  /* border: 1px solid red; */
+  height: 573px;
+  width: 100%;
+}
+/* 
+.choosing__container--lists1{
+    width: 30%;
+}
+.choosing__container--lists2{
+    width: 40%;
+}
+.choosing__container--lists3{
+    width: 30%;
+} */
+
+.choosing__container--lists div {
+  align-items: center;
+  text-align: center;
+}
+
+.wing__back {
+  margin: 3.8rem 0;
+}
+
+.choosing__common--title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #171b20;
+
+  margin: 2.6rem 0;
+}
+.choosing__common--desc {
+  font-size: 1.6rem;
+  color: #6a717c;
+  /* width: 100%; */
+  /* padding: 0 2rem; */
+}
+
+.picture__centered {
+  width: 536px;
+  height: 460px;
+  object-fit: cover;
+}
+
+/* // css phần news  */
+
+.news {
+  width: 100%;
+  padding: 5rem 10%;
+}
+
+.news__container {
+  display: flex;
+}
+.news__container--main {
+  position: relative;
+}
+.news__container--main {
+  /* z-index: -10; */
+}
+.news__container--child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgb(129, 129, 131, 0.8),
+    rgb(88, 87, 87, 0.8),
+    rgb(50, 50, 52, 0.8),
+    rgb(32, 32, 33, 0.8)
+  );
+
+  width: 10px;
+  height: 10px;
+  display: none;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.news__container--main:hover .news__container--child {
+  display: block;
+  width: 100%;
+  height: 140px;
+}
+.news__container--title {
+  font-family: "jost";
+  display: flex;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+
+  align-items: center;
+}
+.news__container--title ion-icon {
+  padding: 1.4rem;
+}
+
+.news__container--desc {
+  font-family: "bodoni moda";
+  color: #ffffff;
+  font-size: 3rem;
+  margin-top: 1rem;
+  padding-left: 1.4rem;
+  line-height: 1.2;
+
+  position: relative;
+}
+.news__container--desc::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-color: #bbbbbb;
+  height: 2px;
+  bottom: 0;
+  left: 1.4rem;
+  transition: width 0.3s ease-in;
+}
+/* .news__container--main:hover .news__container--child{
+    display: block;
+} */
+.news__container--main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news__container--left {
+  width: 66.66666%;
+}
+.news__container--right {
+  width: 33.333333%;
+}
+
+/* // css phần brand   */
+
+.brand {
+  width: 100%;
+  padding: 5rem 10%;
+}
+
+.brand__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.brand__container a img {
+  padding: 1rem 2rem;
+}
+.brand__container a:hover {
+  transition: all 0.6s ease;
+  background-color: #e4e9ed;
+}
+
+/* css phần family  */
+.family {
+  width: 100%;
+  padding: 5rem 10%;
+}
+
+.family__container {
+  background: url("../img/footer/babyshop-instagram.webp") top center / cover
+    no-repeat;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #3bc989;
+  font-family: "jost";
+}
+.family__container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.family__container button ion-icon {
+  padding-right: 1rem;
+  font-size: 1.6rem;
+}
+
+/* css phần payment  */
+.payment {
+  width: 100%;
+  padding: 5rem 10%;
+}
+
+.payment__container {
+  font-family: "jost";
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.payment__container div {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+
+.payment__container div img {
+  width: 50px;
+  height: 50px;
+  margin-right: 2rem;
+}
+.payment__container div p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* css phần footer  */
+footer {
+  width: 100%;
+  padding: 5rem 10%;
+  background-color: #f6f7f9;
+}
+
+.footer__container {
+  font-family: "jost";
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__container div div ul li {
+  line-height: 1.6;
+}
+
+.footer__container--shop {
+  width: 25%;
+  display: block;
+}
+
+.baby__logo {
+  width: 210px;
+  height: 50px;
+}
+.footer__container--shop-child {
+  margin-bottom: 2rem;
+}
+.footer__container--shop p {
+  font-size: 1.6rem;
+  color: #6a717c;
+}
+.shop__visa {
+  width: 210px;
+}
+
+.footer__container--useful {
+  width: 25%;
+  font-size: 2rem;
+}
+
+.footer__container--useful div {
+  margin-bottom: 2rem;
+}
+.footer__container--useful div p {
+  margin-bottom: 2rem;
+}
+.footer__container--useful ul {
+  font-size: 1.6rem;
+}
+.footer__container--useful ul li a {
+  color: #444b57;
+}
+
+.footer__container--customer {
+  width: 25%;
+}
+
+.footer__container--help {
+  width: 25%;
+}
+.footer__container--help div ul li {
+  font-size: 2.2rem;
+  color: #6a717c;
+}
+.footer__container--help div ul li span {
+  color: #000;
+}
+.footer__container--help div:nth-child(2) p {
+  color: #6a717c;
+}
+.footer__container--help div:nth-child(2) ul li {
+  font-size: 1.8rem;
+}
+
+/* css phần author  */
+.author {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  font-family: "jost";
+  color: #6a717c;
+  font-size: 1.8rem;
+
+  background-color: #f6f7f9;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10%;
+}

@@ -1,0 +1,358 @@
+@media screen and (max-width: 1200px){
+
+    /* responve thanh introduce  */
+    .introduce{
+        padding: 1.4rem 6rem;
+    }
+
+    /* responsive phần menu  */
+    .header__menu{
+        display: flex;
+        justify-content: space-between;
+        /* padding: 0 0rem; */
+        width: 100%;
+    }
+    #menu__active{
+        display: block;
+        /* padding-left: 5.6rem; */
+    }
+    .header__menu--lists{
+        display: none;
+    }
+
+    /* phần responsive feature   */
+    .container__feature{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .container__feature div{
+        margin-bottom: 2rem;
+    }
+    .container__feature--left{
+        width: 100%;
+    }
+    .container__feature--right{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* responsive phần advertaisment  */
+    .advertisement__container h2 {
+        /* font-family: 'Bodoni Moda', serif; */
+        padding: 0 16%;
+    }
+
+    /* responsive phần limited  */
+
+    .limited{
+        
+    }
+    .container__limited{
+        
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .limited__offer{
+        height: 724px;
+    }
+    .limited__slide{ 
+        height: 600px;
+    }
+
+    .limited__offer{
+        width: 100%;
+    }  
+    .limited__offer--percen{
+        font-size: 8rem;
+    }
+    .limited__offer--center p:nth-child(3){
+        font-size: 4rem;
+    } 
+    .limited__timer{
+        display: block;
+        margin: 0;
+    }
+
+
+    .limited__slide{
+        width: 100%;
+    }
+
+    /* responsive phần question  */
+    .question__container p:nth-child(1){
+        /* font-size: 4rem; */
+        margin: 0 20%;
+    }
+    .question__container p:nth-child(2){
+        /* font-size: 4rem; */
+        margin: 0 20%;
+    }
+
+    /* responsive phần choosing  */
+    .choosing__container--box{ 
+        display: flex;
+        flex-direction: column;
+    }
+    .choosing__container--lists{
+        width: 100%;
+
+    }
+    .picture__centered{
+        width: 400px;
+        height: 344px;
+        object-fit: cover;
+    }
+    .choosing__container--lists2 {
+        height: 420px;
+    }
+
+    .btn__view--all{
+        margin-top: 5rem;
+    }
+
+    /* responsive phần news  */
+    .news__container--title{
+        font-size: 2rem; 
+    }
+    .news__container--title ion-icon{
+        padding: 1.4rem;
+    }
+    
+
+    /* .news__container--desc2,
+    .news__container--desc3{
+        font-size: 2rem;
+    } */
+
+    /* responsive phần payment  */
+    .payment{
+        width: 100%;
+        padding: 5rem 0%;
+    }
+    .payment__container{
+        font-family: "jost";
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+    }
+
+    .payment__container div{
+        margin-bottom: 2rem;
+        /* display: block; */
+        align-items: center;
+        text-align: center;
+    }
+    .payment__container div img{
+        margin: 0;
+    }
+
+    /* responsive phần footer  */
+    .footer__container{
+        font-family: "jost";
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    .footer__container--shop,
+    .footer__container--useful,
+    .footer__container--customer,
+    .footer__container--help{
+        width: 50%;
+    }
+
+    /* responsive phần authro */
+    .author{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 767px){
+    /* responve thanh introduce  */
+    .introduce{
+        display: none;
+    }
+    /* responsive thanh header  */
+    .container{
+        display: flex;
+        width: 100%;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        padding: 0 6rem;
+    }
+    #menu__active{
+        /* padding-right: 100px; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header__menu--select{
+        display: none;
+    }
+
+    /* phần responsive feature  */
+    .feature--title{
+        font-size: 3rem;
+    }
+    .feature--title span:nth-child(1){
+        font-size: 3rem;
+    }
+    .feature--title span:nth-child(2){
+        font-size: 3rem;
+    }
+
+     /* phần responsive category  */
+    .container__category--main{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 8rem;
+    }
+
+    /* responsive phần limited  */
+    .limited__slide--textBig{
+        font-size: 4rem;
+    }
+
+    /* responsive phần question  */
+    .question__container p:nth-child(1){
+        font-size: 4rem;
+        margin: 0 20%;
+    }
+
+    .question__container p:nth-child(1){
+        font-size: 4rem;
+        margin: 0 20%;
+    }
+
+    /* responsive phần news  */
+    .news__container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .news__container--left{
+        width: 100%;
+    }
+    .news__container--right{
+        width: 100%;
+    }
+
+    /* responsive phần payment  */
+    .payment{
+        width: 100%;
+        padding: 5rem 0%;
+    }
+    .payment__container{
+        font-family: "jost";
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .payment__container div{
+        margin-bottom: 2rem;
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* responsive phần footer  */
+    .footer__container{
+        font-family: "jost";
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    .footer__container--shop,
+    .footer__container--useful,
+    .footer__container--customer,
+    .footer__container--help{
+        width: 100%;
+    }
+
+    /* responsive phần authro */
+    .author{
+        display: block;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 479px){
+    /* phần responsive feature  */
+    .feature--title{
+        font-size: 2rem;
+        width: 200px;
+    }
+    .feature--title span:nth-child(1){
+        font-size: 2rem;
+    }
+    .feature--title span:nth-child(2){
+        font-size: 2rem;
+    }
+
+    /* responsive phần limited  */
+    .click__left{
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+    .click__right{
+        position: absolute;
+        right: -78px;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+/* fix riêng iphone 6,7,8  */
+@media screen and (max-width: 400px){
+    /* responsive phần menu  */
+    .container{
+        padding: 0;
+    }
+    #menu__active{
+        display: block;
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 500px){
+    .question__container p:nth-child(1){
+        font-size: 3.4rem;
+        margin: 0 20%;
+    }
+
+    .picture__centered{
+        width: 300px;
+        height: 344px;
+        object-fit: cover;
+    }
+    .choosing__container--lists2 {
+        height: 420px;
+    }
+
+
+}

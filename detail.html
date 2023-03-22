@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://thumbs.dreamstime.com/b/jav-letter-initial-logo-design-vector-illustration-jav-letter-initial-logo-design-vector-illustration-letter-initial-logo-design-236630067.jpg">
+
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/responsive_index.css">
+
+    <link rel="stylesheet" href="./assets/css/detail.css">
+    <link rel="stylesheet" href="./assets/css/responsive_detail.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="modal__cover ">
+        <div class="menu__cover--toggle">
+            <div class="menu__cover--close">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+            <ul class="menu__cover--slect">
+                <li>
+                    <ion-icon name="person-outline"></ion-icon>
+                </li>
+                <li class="menu__cover--heart">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <span>0</span>
+                </li>
+                <li class="menu__cover--bag">
+                    <ion-icon name="bag-outline"></ion-icon>
+                    <!-- <ion-icon name="cart-outline"></ion-icon> -->
+                    <span>0</span>
+                    <p>1.00$</p>
+                </li>
+                <li>
+                    <ion-icon name="search-outline"></ion-icon>
+                </li>
+            </ul>
+
+            <ul class="menu__cover--title">
+                <li>
+                    <a href="/">
+                        HOME
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        OUR PRODUCTS
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        ABOUT US
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        BLOG
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        CLIENT CENTER
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        FAQ
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="menu__cover--help">
+                <li>
+                    <a href="">Our stores </a>
+                </li>
+                <li>
+                    <a href="">Useful info</a>
+                </li>
+                <li>
+                    <a href="">Help</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="introduce">
+        <div class="introduce__text">
+            <p>Autumn Sales starts on November<span>: Sneak a peek now</span></p>
+        </div>
+
+        <ul class="introduce__help">
+            <li>
+                <a href="">Our stores </a>
+            </li>
+            <li>
+                <a href="">Useful info</a>
+            </li>
+            <li>
+                <a href="">Help</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="container ">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="./assets/img/logo_web.png" alt="">
+                </a>
+            </div>
+
+            <div class="header__menu">
+                <button id="menu__active">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+                <ul class="header__menu--lists">
+                    <li>HOME</li>
+                    <li>OUR PRODUCTS</li>
+                    <li>ABOUT US</li>
+                    <li>BLOG</li>
+                    <li>CLIENT CENTER</li>
+                    <li>FAQ</li>
+                </ul>
+
+                <ul class="header__menu--select">
+                    <li>
+                        <ion-icon name="person-outline"></ion-icon>
+                    </li>
+                    <li class="header__menu--heart">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span>0</span>
+                    </li>
+                    <li id="openCart" class="header__menu--bag">
+                        <ion-icon name="bag-outline"></ion-icon>
+                        <span id="displayQuantityProducts">0</span>
+                        <p id="displayTotalMoney">1.00$</p>
+                    </li>
+                    <li>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CART  -->
+
+    <div class="yourcart__container activeCart">
+        <div class="yourcart_overlay">
+            <div class="yourcart">
+                <div class="yourcart__title">
+                    <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+                    <p>
+                        <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+                        Cart
+                    </p>
+                </div>
+                <div style="display: block; overflow-y: scroll;" class="yourcart__products">
+                    <!-- <p>
+                        <i class="fa-sharp fa-solid fa-bag-shopping"></i> <br>
+                        Your cart is current empty
+                    </p> -->
+
+                </div>
+                <div class="yourcart__payment">
+                    <ul>
+                        <li>Subtitle:</li>
+                        <li>$0.00</li>
+                    </ul>
+                    <ul>
+                        <li>Total:</li>
+                        <li id="totalAllMoney" class="total__money">$0.00</li>
+                    </ul>
+                    <button class="process__checkout">Proceed to checkout</button>
+                    <a href="View cart">View cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="detail">
+        <div class="detail__container">
+
+        </div>
+        <button class="key__down">
+            <i class='bx bxs-chevron-down'></i>
+        </button>
+    </div>
+
+    <div class="review">
+        <div class="review__container">
+            <div class="review__container--title">
+                <p>Description</p>
+                <p>Additional infomation </p>
+                <p>Reviews</p>
+            </div>
+            <p class="review__container--desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Autem, omnis aut dolorum praesentium dignissimos voluptatibus iusto?
+                Vitae exercitationem impedit itaque aperiam
+
+            </p>
+            <div class="review__container--weather">
+                <div class="weather__container--weather-top">
+                    <div class="weather__container--weather-item">
+                        <p>ENVIRONMENTALLY FRIENDLY</p>
+                        <div class="weather__container--weather-item-button">
+                            <button>
+                                <i class='bx bx-brightness'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-brightness'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-brightness'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-brightness'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="weather__container--weather-item">
+                        <p>WASHING</p>
+                        <div class="weather__container--weather-item-button">
+                            <button>
+                                <i class='bx bxs-hot'></i>
+                            </button>
+                            <button>
+                                <i class='bx bxs-hot'></i>
+                            </button>
+                            <button>
+                                <i class='bx bxs-hot'></i>
+                            </button>
+                            <button>
+                                <i class='bx bxs-hot'></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather__container--weather-bottom">
+                    <div class="weather__container--weather-item">
+                        <p>WARMNESS</p>
+                        <div class="weather__container--weather-item-button">
+                            <button>
+                                <i class='bx bx-cool'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cool'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cool'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cool'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="weather__container--weather-item">
+                        <p>DURABILITY</p>
+                        <div class="weather__container--weather-item-button">
+                            <button>
+                                <i class='bx bx-cloud-drizzle'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cloud-drizzle'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cloud-drizzle'></i>
+                            </button>
+                            <button>
+                                <i class='bx bx-cloud-drizzle'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="review__container--feelings">
+                <div class="review__container--feelings-left">
+                    <img src="./assets/img/footer/babyshop-blog-pic2-1200x900.webp" alt="">
+                    <div>
+                        <h2>Pellentesque sed eu</h2>
+                        <p>Aenean quis lectus nec magna. In mauris sed molestie tincidunt. Nullam a nunc. Nulla
+                            facilisi. Morbi pede.</p>
+                    </div>
+                </div>
+                <div class="review__container--feelings-right">
+                    <img src="./assets/img/footer/babyshop-blog-pic1-1200x900.webp" alt="">
+                    <div>
+                        <h2>Nam pellentesque leo</h2>
+                        <p>Nulla nec massa molestie vitae, cursus eu, tempus arcu. Duis neque vel metus. Aliquam
+                            adipiscing wisi diam bibendum pede
+                            porta laoreet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="review__container--desc review__container--desc-bottom">
+                Ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus lorem ipsum
+                fermentum in,
+                dolor.
+            </p>
+            <p class="review__container--desc review__container--desc-bottom">
+                Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum
+                adipiscing wisi. Aliquam
+                erat ac ipsum. Integer aliquam purus. Quisque lorem tortor
+            </p>
+        </div>
+    </div>
+
+    <div class="benefit">
+        <div class="benefit__container">
+            <div class="benefit__container--feelings">
+                <div class="benefit__container--feelings-left">
+                    <img src="./assets/img/babyshop-productdetails-pic1.webp" alt="">
+                    <div class="benefit__container--feelings-left_content">
+                        <p>PHASELLUS TORTOR</p>
+                        <p>Ultricies porta urna laoreet enim</p>
+                        <p>
+                            Inceptos aliquam lectus nullam eget mi sapien luctus praesent habitant porttitor tempor
+                            proin tempor gravida massa at
+                            lectus nam praesent sociosqu aenean quis.
+                        </p>
+                        <ul>
+                            <li><i class='bx bxs-star'></i>Suspendisse a pellentesque.</li>
+                            <li><i class='bx bxs-star'></i>Quisque lorem tortor fringilla.</li>
+                            <li><i class='bx bxs-star'></i>Quisque cursus et, porttitor.</li>
+                            <li><i class='bx bxs-star'></i>Nulla ipsum dolor lacus.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="benefit__container--feelings-right">
+                    <div class="benefit__container--feelings-right_content">
+                        <p>BIBENDUM NETUS</p>
+                        <p>
+                            Vestibulum bibendum nulla torquent semper
+                        </p>
+                        <p>
+                            Tristique nisi rutrum porta magna pharetra aenean proin rutrum nostra eu curabitur consequat
+                            dolor molestie auctor porta
+                            et lacus porta fusce vulputate non dui quis.
+                        </p>
+                    </div>
+                    <img src="./assets/img/babyshop-productdetails-pic2.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="compare">
+        <div class="compare__container">
+            <div class="compare__container--title">
+                <p>Compare our products</p>
+                <p>Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum.</p>
+            </div>
+            <div class="compare__container--variant">
+                <div class="compare__container--variant--common compare__container--variant--left">
+                    <button>1</button>
+                    <p class="compare__container--variant--name">Variant 1</p>
+                    <p class="compare__container--variant--desc">Vitae adipiscing turpis. Aenean ligulamolestie id
+                        vivide.</p>
+                    <ul>
+                        <li>10</li>
+                        <li>Lorem lipsum</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                        <li>Morbi accumsan</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                    </ul>
+                </div>
+                <div class="compare__container--variant--common compare__container--variant--center">
+                    <button>2</button>
+                    <p class="compare__container--variant--name">Variant 1</p>
+                    <p class="compare__container--variant--desc">Vitae adipiscing turpis. Aenean ligulamolestie id
+                        vivide.</p>
+                    <ul>
+                        <li>10</li>
+                        <li>Lorem lipsum</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                        <li>Morbi accumsan</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                    </ul>
+                </div>
+                <div class="compare__container--variant--common compare__container--variant--right">
+                    <button>3</button>
+                    <p class="compare__container--variant--name">Variant 1</p>
+                    <p class="compare__container--variant--desc">Vitae adipiscing turpis. Aenean ligulamolestie id
+                        vivide.</p>
+                    <ul>
+                        <li>10</li>
+                        <li>Lorem lipsum</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                        <li>Morbi accumsan</li>
+                        <li><i class='bx bx-radio-circle'></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wing__back-center">
+                <img src="./assets/img/wingback.png" alt="">
+            </div>
+            <div class="compare__container--information">
+                <p class="compare__container--information-title">Additional information</p>
+                <div class="compare__container--information-content">
+                    <div>
+                        <p>Weight</p>
+                        <i>0.75kg</i>
+                    </div>
+                    <div>
+                        <p>Dimenstions</p>
+                        <i>25 × 40 × 80 cm</i>
+                    </div>
+                    <div>
+                        <p>Height</p>
+                        <i>50, 54, 58, 62, 68</i>
+                    </div>
+                    <div>
+                        <p>Age</p>
+                        <i>0 - 2 years</i>
+                    </div>
+                    <div>
+                        <p>Color</p>
+                        <i>Aquamarine, Black, Pink</i>
+                    </div>
+                </div>
+            </div>
+            <div class="wing__back-center">
+                <img src="./assets/img/wingback.png" alt="">
+            </div>
+            <div class="compare__container--last">
+                <p>Reviews</p>
+                <p>There are no reviews yet</p>
+                <p>Be the first to review “Baby Set Little Family”</p>
+                <p>You must be <span><a href="">logged</a></span> in to post a review.</p>
+            </div>
+            <div class="wing__back-center">
+                <img src="./assets/img/wingback.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="related__product">
+        <p>Related products</p>
+    </div>
+    <div class="products">
+        <div class="products__container">
+            <div class="products__item">
+                <a href="">
+                    <div class="products__item--view">
+                        <img src="./assets/img/products/p1.jpg" alt="">
+                        <div class="products__item--options">
+                            <ion-icon name="link-outline"></ion-icon>
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="expand-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="products__item--name">
+                        <p>Baby Set Hello Cutie</p>
+                        <ul class="products__item--click">
+                            <li class="blue"></li>
+                            <li class="brown"></li>
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                        </ul>
+                        <div class="products__item--price">
+                            <del>$15.00 </del><span>$10.00</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products__item">
+                <a href="">
+                    <div class="products__item--view">
+                        <img src="./assets/img/products/p1.jpg" alt="">
+                        <div class="products__item--options">
+                            <ion-icon name="link-outline"></ion-icon>
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="expand-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="products__item--name">
+                        <p>Baby Set Hello Cutie</p>
+                        <ul class="products__item--click">
+                            <li class="blue"></li>
+                            <li class="brown"></li>
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                        </ul>
+                        <div class="products__item--price">
+                            <del>$15.00 </del><span>$10.00</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products__item">
+                <a href="">
+                    <div class="products__item--view">
+                        <img src="./assets/img/products/p1.jpg" alt="">
+                        <div class="products__item--options">
+                            <ion-icon name="link-outline"></ion-icon>
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="expand-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="products__item--name">
+                        <p>Baby Set Hello Cutie</p>
+                        <ul class="products__item--click">
+                            <li class="blue"></li>
+                            <li class="brown"></li>
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                        </ul>
+                        <div class="products__item--price">
+                            <del>$15.00 </del><span>$10.00</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products__item">
+                <a href="">
+                    <div class="products__item--view">
+                        <img src="./assets/img/products/p1.jpg" alt="">
+                        <div class="products__item--options">
+                            <ion-icon name="link-outline"></ion-icon>
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="expand-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="products__item--name">
+                        <p>Baby Set Hello Cutie</p>
+                        <ul class="products__item--click">
+                            <li class="blue"></li>
+                            <li class="brown"></li>
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                        </ul>
+                        <div class="products__item--price">
+                            <del>$15.00 </del><span>$10.00</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="button__back">
+        <button class="  btn btn-black">
+            <p><span>Not for you -</span> <span><a href="">Back to product list</a></span></p>
+        </button>
+    </div>
+
+    <div class="payment">
+        <div class="payment__container">
+            <div>
+                <img src="./assets/img/icon_footer/babyshop-footer-icon1.png" alt="">
+                <p>FREE SHIPPING</p>
+            </div>
+            <div>
+                <img src="./assets/img/icon_footer/babyshop-footer-icon2.png" alt="">
+                <p>RETURN POLICY</p>
+            </div>
+            <div>
+                <img src="./assets/img/icon_footer/babyshop-footer-icon3.png" alt="">
+                <p>PAYMENT SECURE</p>
+            </div>
+            <div>
+                <img src="./assets/img/icon_footer/babyshop-footer-icon4.png" alt="">
+                <p>PREE SUPPORT</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__container--shop">
+                <img class="footer__container--shop-child baby__logo" src="./assets/img/logo_web.png" alt="">
+                <p class="footer__container--shop-child ">In the BeFriends Club you can take advantage of attractive
+                    offers
+                </p>
+                <button class="footer__container--shop-child btn btn-black">JOIN NOW</button>
+                <br>
+                <img class="footer__container--shop-child shop__visa"
+                    src="./assets/img/icon_footer/babyshop-footer-pic1-300x22.png" alt="">
+            </div>
+
+            <div class="footer__container--useful">
+                <div>
+                    <p>Useful links</p>
+                    <ul>
+                        <li> <a href="">Contact us</a> </li>
+                        <li> <a href="">Help & About us</a> </li>
+                        <li> <a href="">Shipping & Return</a> </li>
+                        <li> <a href="">Refuncd Policy</a> </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Delivery</p>
+                    <ul>
+                        <li> <a href="">How it Works</a> </li>
+                        <li> <a href="">Free Delevery</a> </li>
+                        <li> <a href="">FAQ</a> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__container--customer footer__container--useful">
+                <div>
+                    <p>Customer service</p>
+                    <ul>
+                        <li> <a href="">Orders</a> </li>
+                        <li> <a href="">Download</a> </li>
+                        <li> <a href="">Address</a> </li>
+                        <li> <a href="">Account details</a> </li>
+                        <li> <a href="">Lost password</a> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__container--help footer__container--useful">
+                <div>
+                    <p>Need helps?</p>
+                    <ul>
+                        <li>
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                            + 64 (0) 383 766 284
+                        </li>
+                        <li>
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                            + 64 (0) 383 766 284
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Opening hours: </p>
+                    <ul>
+                        <li>
+                            <span>Monday - Friday:</span> 8am - 5pm
+                        </li>
+                        <li>
+                            <span>Suturday - Sunday:</span> 9am - 4pm
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="author">
+        <p>© 2022 Betheme by Muffin group | All Rights Reserved | Powered by WordPress</p>
+        <p>Terms and conditions Privacy policy Cookies</p>
+    </div>
+
+</body>
+
+<script type="module" src="./assets/js/app.js"></script>
+<script type="module" src="./assets/js/detail.js"></script>
+
+</html>
